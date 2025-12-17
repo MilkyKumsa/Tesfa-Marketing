@@ -18,10 +18,9 @@ import {
 export default function Home() {
   return (
     <main className="min-h-screen bg-gray-900 text-white scroll-smooth">
-      
-      {/* ===== HERO SECTION - Enhanced with Attractive Background ===== */}
+
+      {/* ===== HERO SECTION ===== */}
       <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Attractive Background - First Option (Glowing Gold & Blue Waves) */}
         <div className="absolute inset-0 -z-10">
           <Image
             src="https://t3.ftcdn.net/jpg/15/34/32/66/360_F_1534326628_rqfWModjO9N0kBHnJnfuClkGZp9N3zx6.jpg"
@@ -33,7 +32,6 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-gray-900/90 via-gray-900/60 to-gray-900/90" />
         </div>
 
-        {/* Fixed Navigation */}
         <header className="fixed top-0 left-0 right-0 bg-gray-900/95 backdrop-blur-lg shadow-2xl z-50 border-b border-amber-400/20">
           <div className="container mx-auto px-6 py-5 flex justify-between items-center">
             <a href="#home" className="h-12 w-64 relative block">
@@ -56,7 +54,6 @@ export default function Home() {
           </div>
         </header>
 
-        {/* Hero Content */}
         <div className="container mx-auto px-6 text-center z-10">
           <h2 className="text-5xl md:text-7xl font-extrabold text-white mb-4 animate-fadeInUp">
             Elevate Your Brand with
@@ -90,7 +87,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      
       {/* ===== SERVICES SECTION ===== */}
       <section id="services" className="py-24 bg-gray-800/50">
         <div className="container mx-auto px-6">
@@ -149,6 +146,29 @@ export default function Home() {
               <p>We combine creative vision with data-driven strategy to deliver exceptional results for brands across industries.</p>
               <p>Our team of strategists, designers, developers, and marketers are committed to transparency, innovation, and building long-term partnerships that drive real business growth.</p>
               <p className="text-amber-400 font-bold text-xl">Your success is our mission.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== PARTNERS / CLIENTS LOGOS ===== */}
+      <section id="partners" className="py-16 bg-gray-950">
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-amber-400 mb-12">
+            Our Trusted Partners
+          </h2>
+
+          <div className="overflow-hidden relative">
+            <div className="flex animate-marquee space-x-12">
+              <Image src="/partners/company1.png" alt="Company 1" width={150} height={80} className="object-contain" />
+              <Image src="/partners/company2.png" alt="Company 2" width={150} height={80} className="object-contain" />
+              <Image src="/partners/company3.png" alt="Company 3" width={150} height={80} className="object-contain" />
+              <Image src="/partners/company4.png" alt="Company 4" width={150} height={80} className="object-contain" />
+              <Image src="/partners/company5.png" alt="Company 5" width={150} height={80} className="object-contain" />
+              {/* Repeat logos for smooth scrolling */}
+              <Image src="/partners/company1.png" alt="Company 1" width={150} height={80} className="object-contain" />
+              <Image src="/partners/company2.png" alt="Company 2" width={150} height={80} className="object-contain" />
+              <Image src="/partners/company3.png" alt="Company 3" width={150} height={80} className="object-contain" />
             </div>
           </div>
         </div>

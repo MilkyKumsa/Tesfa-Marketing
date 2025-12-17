@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Your custom animations (keep these) */
+/* ===== Fade In Up Animations (Already in your CSS) ===== */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -17,12 +17,51 @@
   animation: fadeInUp 1.4s ease-out forwards;
 }
 
+/* Animation delays */
 .delay-300 { animation-delay: 0.3s; }
 .delay-800 { animation-delay: 0.8s; }
 .delay-1200 { animation-delay: 1.2s; }
 .delay-1800 { animation-delay: 1.8s; }
 
-/* Optional: Global dark theme overrides if needed */
+/* ===== Marquee / Partner Logos Animation ===== */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 25s linear infinite;
+}
+
+/* Optional: Gradient fade effect at edges for partner logos */
+.partner-gradient::before,
+.partner-gradient::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.partner-gradient::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(17, 24, 39, 1), rgba(17, 24, 39, 0));
+}
+
+.partner-gradient::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(17, 24, 39, 1), rgba(17, 24, 39, 0));
+}
+
+/* ===== Optional: Dark Theme Overrides ===== */
 :root {
   --background: 222.2 84% 4.9%; /* navy dark */
   --foreground: 210 40% 98%; /* white text */
